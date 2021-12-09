@@ -9,6 +9,6 @@ jobs:
       - uses: pxgamer/phpunit-action@master
         with:
           # If there isn't a PHPUnit config, specify files or directories to test
-          command: test/CalculadoraTesy.php
+          command: test/CalculadoraTest.php
           bootstrap: vendor/autoload.php
           configuration: test/phpunit.xml
