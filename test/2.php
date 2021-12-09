@@ -1,5 +1,6 @@
 <?php
-
+namespace App\P;
+use App\Test\OperationsTest;
 class Operations
 {
 

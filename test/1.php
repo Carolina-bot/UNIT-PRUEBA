@@ -1,4 +1,7 @@
 <?php
+namespace App\Test;
+use App\P\Operations;
+
 
 class OperationsTest extends \PHPUnit\Framework\TestCase
 {
