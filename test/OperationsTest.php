@@ -1,8 +1,6 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
-
-class OperationsTest extends TestCase
+class OperationsTest extends \PHPUnit\Framework\TestCase
 {
 
     private $op;
