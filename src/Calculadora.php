@@ -11,4 +11,7 @@ $this->num2=$a2;
 public function suma(){
 return $this->num1+$this->num2;
 }
+public function res(){
+    return $this->num1-$this->num2;
+    }
 }
