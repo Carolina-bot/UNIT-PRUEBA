@@ -1,5 +1,5 @@
 on: push
-name: CI
+name: PhpUnit prueba de test
 jobs:
   phpunit:
     runs-on: ubuntu-latest
