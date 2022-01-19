@@ -12,21 +12,3 @@ jobs:
           command: test/CalculadoraTest.php
           bootstrap: vendor/autoload.php
           configuration: test/phpunit.xml
-  
-  push_to_registry:
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Check out the repo
-        env:
-          DOCKER_USER: ${{ secrets.DOCKER_USER }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        run: |
-          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-      - name: Build
-        run: docker build . --Dockerfile --tag chamodshehanka/node-test:$(date +%s)
-
-      - name: Build and push Docker image
-        run: docker push ${{ secrets.DOCKER_USER }}/docker101tutorial
