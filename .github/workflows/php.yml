@@ -14,6 +14,7 @@ jobs:
           configuration: test/phpunit.xml
 
   push_to_registry:
+    needs: phpunit
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
