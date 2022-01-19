@@ -26,7 +26,7 @@ jobs:
         run: |
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: Build image
-        run: docker build -t localhost:8000/ramonpradas/docker_publish_github:0.0.1 .
+        run: docker build -t ${{secrets.DOCKER_USER}}/docker_publish_github .
 
       - name: Docker Push
         run: docker push ramonpradas/docker_publish_github
