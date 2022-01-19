@@ -1,4 +1,2 @@
-FROM ubuntu 
-
-RUN apt-get update 
-CMD [“echo”,”Image created”] 
+FROM php:8.0-apache 
+RUN docker-php-ext-install mysqli
