@@ -29,6 +29,9 @@ jobs:
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: Build image
         run: docker build -t ${{secrets.DOCKER_USER}}/docker_publish_github:${{github.sha}} .
+        
 
       - name: Docker Push
-        run: docker push ${{secrets.DOCKER_USER}}/docker_publish_github:${{github.sha}}
+        run: | 
+            docker push ${{secrets.DOCKER_USER}}/docker_publish_github:${{github.sha}}
+            docker push ${{secrets.DOCKER_USER}}/docker_publish_github:latest
