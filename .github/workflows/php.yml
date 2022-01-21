@@ -31,4 +31,4 @@ jobs:
         run: docker build -t ${{secrets.DOCKER_USER}}/docker_publish_github .
 
       - name: Docker Push
-        run: docker push ${{secrets.DOCKER_USER}}/docker_publish_github
+        run: docker push ${{secrets.DOCKER_USER}}/docker_publish_github:${{github.sha}}
